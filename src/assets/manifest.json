@@ -1,0 +1,21 @@
+{
+    "name": "react-browser-extension-boilerplate",
+    "description": "You can change name and description in manifest.json file.",
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "browser_action": {
+        "default_title": "React browser extension boilerplate. You can change this title in manifest.json file",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ]
+}

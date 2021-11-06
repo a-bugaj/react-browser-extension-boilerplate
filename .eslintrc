@@ -1,0 +1,53 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint", "@emotion"],
+    "rules": {
+        "react/no-did-mount-set-state": "error",
+        "react/no-deprecated": "error",
+        "react/no-multi-comp": "error",
+        "react/no-render-return-value": "error",
+        "react/state-in-constructor": "error",
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "lines-between-class-members": "off",
+        "no-console": "error",
+        "import/no-extraneous-dependencies": "off",
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "varsIgnorePattern": "^_",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "@typescript-eslint/ban-ts-comment": "error",
+        "import/no-cycle": "off",
+        "react/destructuring-assignment": "off",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off"
+    }
+}
